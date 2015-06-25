@@ -1,5 +1,5 @@
 #Пропивать IP и порт сервера
-    В файле: /public/app/common/services/congig.js
+    В файле: /public/app/common/services/config.js
 
 #Выполнить в консоли  
     npm install
