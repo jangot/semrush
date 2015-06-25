@@ -6,10 +6,8 @@ define([
     'common/services/stateData',
 
     'common/views/body/controller',
-    'common/views/index/controller',
-    'common/views/inner/controller',
 
-    'common/directives/pageTitle/directive'
+    'common/views/index/controller'
 
 ], function(app) {
     app.config(function($locationProvider, $stateProvider, expandViewProvider) {
@@ -56,20 +54,11 @@ define([
                 url: '/',
                 view: 'common/index',
                 data: {
-                    title: 'Главная страница'
-                }
-            }
-        );
-
-        $stateProvider.state(
-            'body.inner',
-            {
-                url: '/inner',
-                view: 'common/inner',
-                data: {
-                    title: 'Внутренняя страница'
+                    title: 'Добрый день'
                 }
             }
         );
     });
+
+
 });

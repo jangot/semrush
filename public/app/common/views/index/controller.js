@@ -5,5 +5,6 @@ define([
 ], function(app){
     "use strict";
 
-    app.controller('CommonIndex', function() {});
+    app.controller('CommonIndex', function($scope) {
+    });
 });

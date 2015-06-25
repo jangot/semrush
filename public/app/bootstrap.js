@@ -4,7 +4,8 @@ define([
 
     'angularAMD',
 
-    'common/config'
+    'common/config',
+    'articles/config'
 
 ], function(app, angularAMD) {
     angularAMD.bootstrap(app);
