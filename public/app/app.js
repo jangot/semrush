@@ -3,6 +3,7 @@ define([
     'angular',
     'angularResource',
     'uiRouter',
+    'angularTablesort',
 
     'angularAMD',
 
@@ -11,6 +12,6 @@ define([
 
 ], function(angular) {
     return angular.module('app', [
-        'ui.router',  'ui.bootstrap', 'ngResource'
+        'ui.router',  'ui.bootstrap', 'ngResource', 'tableSort'
     ]);
 });

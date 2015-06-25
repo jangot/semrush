@@ -8,7 +8,7 @@ define([
     app.constant('config', {
         resources: {
             api: {
-                host: 'http://localhost:8888/'
+                host: 'http://192.168.2.39:3000/'
             }
         }
     });

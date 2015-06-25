@@ -10,13 +10,15 @@ requirejs.config({
         uiRouter: '../bower_components/angular-ui-router/release/angular-ui-router',
 
         uiBootstrap: '../bower_components/angular-bootstrap/ui-bootstrap',
-        uiBootstrapTpl: '../bower_components/angular-bootstrap/ui-bootstrap-tpls'
+        uiBootstrapTpl: '../bower_components/angular-bootstrap/ui-bootstrap-tpls',
+        angularTablesort: '../bower_components/angular-tablesort/js/angular-tablesort'
     },
     shim: {
         angular: {
             exports: 'angular',
             deps: ['jquery', 'lodash']
         },
+        angularTablesort: ['angular'],
         angularAMD: ['angular'],
         uiRouter: ['angular'],
         uiBootstrap: ['angular'],

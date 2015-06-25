@@ -11,7 +11,9 @@ define([
             },
             templateUrl: '/app/articles/directive/articles/template.html',
             link: function(scope) {
-                console.log(scope.articles());
+                scope.getScore = function(article, index) {
+                    return index + 10//TODO calculate
+                }
             }
         }
     });

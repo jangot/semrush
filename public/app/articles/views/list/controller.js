@@ -10,9 +10,13 @@ define([
     app.controller('ArticlesList', function($scope, articles) {
         articles
             .getList()
-            .$promise
             .then(function(result) {
-                $scope.articles = result
+                var count = 0;
+                //result.forEach(function(item) {
+                //    item.score = count++;
+                //})
+                console.log(result);
+                $scope.articles = result;
             });
 
     });

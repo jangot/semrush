@@ -1,3 +1,4 @@
 <div class="container">
-    <app-articles nf-if="articles" data="articles"></app-articles>
+    <app-articles ng-if="articles" data="articles"></app-articles>
+    <div ng-if="!articles">Loading...</div>
 </div>

@@ -26,7 +26,7 @@ define([
             actions = angular.extend({}, DEFAULT_ACTIONS, actions);
 
             _.forOwn(actions, function(config) {
-                config = decorateAction(config);
+                //config = decorateAction(config);
                 if (config.url) {
                     config.url = addUrlPrefix(config.url);
                 }
