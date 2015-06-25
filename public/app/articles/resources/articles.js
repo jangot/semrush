@@ -6,17 +6,14 @@ define([
 
 ], function(app) {
 
-    var item = {
-        url: 'http://test.ru/sdfsdf',
-        title: 'Title test',
-        author: 'Roma',
-        date: new Date(),
-        social: {
-            fb: 123,
-            gPlus: 23
-        }
-    };
-
+    function getScore(item) {
+        var result = 0;
+        _.forEach(item.social, function(socialItem) {
+            //_.forEach()
+            //socialItem
+        });
+        return 20;
+    }
 
     app.service('Articles', function(apiResource, $q) {
         return apiResource('request', {}, {
@@ -26,31 +23,18 @@ define([
             query: {
                 method: 'GET',
                 url: 'response',
-                transformResponse: function(data) {
-                    console.log(data);
-                    //data.forEach(function(item) {
-                    //    item.score = 10;
-                    //});
-                    return data;
-                },
+                //transformResponse: function (data) {
+                //    var result = angular.fromJson(data);
+                //    result.forEach(function(item) {
+                //        item.score = getScore(item);
+                //    });
+                //    return result;
+                //},
                 isArray: true
             }
         });
 
-        //return {
-        //    query: function() {
-        //        var result = [];
-        //        _.times(30, function(i) {
-        //            var newItem = _.clone(item);
-        //            newItem.date = new Date();
-        //            newItem.date.setDate(i);
-        //            result.push(newItem);
-        //        });
-        //        return {
-        //            $promise: $q.when(result)
-        //        };
-        //    }
-        //}
+
     });
 
 });

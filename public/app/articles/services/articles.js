@@ -5,9 +5,28 @@ define([
     'articles/resources/articles'
 
 ], function(app) {
+    var item = {
+        url: 'http://test.ru/sdfsdf',
+        title: 'Title test',
+        author: 'Roma',
+        date: new Date(),
+        social: {
+            fb: 123,
+            gPlus: 23
+        }
+    };
 
-
-    app.factory('articles', function(Articles, $q) {
+    function getItems() {
+        var result = [];
+        _.times(30, function(i) {
+            var newItem = _.clone(item);
+            newItem.date = new Date();
+            newItem.date.setDate(i);
+            result.push(newItem);
+        });
+        return result;
+    }
+    app.factory('articles', function(Articles, $q, $timeout) {
         var deferred = null;
         return {
             loadList: function(urls) {
@@ -35,13 +54,15 @@ define([
                             deferred.resolve(result);
                         })
                         .catch(function() {
-                            load(id);
+                            $timeout(function() {
+                                load(id);
+                            }, 500);
                         });
                 }
             },
             getList: function() {
                 if (deferred) {
-                    deferred.promise;
+                    return deferred.promise;
                 }
                 return $q.reject();
             }
